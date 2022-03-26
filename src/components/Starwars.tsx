@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FilmItem from "./FilmItem";
 
 export const Starwars = () => {
   const [ninja, setNinja] = useState({
@@ -6,7 +7,7 @@ export const Starwars = () => {
     height: 0,
     gender: "",
     homeworld: "",
-    films: "",
+    films: [],
     loadedDetails: false,
   });
 
@@ -27,20 +28,23 @@ export const Starwars = () => {
         });
       });
   };
+
+  const otherMov = ninja.films.map((film: any, i) => {
+    return <FilmItem url={film} key={i} />;
+    //   return <li>{film}</li>;
+  });
+
   return (
     <div>
       {ninja.loadedDetails && (
         <div>
           <h1>{ninja.name}</h1>
-          <div>{ninja.height}</div>
+          <div>{ninja.height} cm</div>
           <p>{ninja.gender}</p>
           <p>
             <a href="{ninja.homeworld}">homeworld</a>
           </p>
-
-          <ul>
-            <li>{ninja.films}</li>
-          </ul>
+          <ul>{otherMov}</ul>
         </div>
       )}
 
