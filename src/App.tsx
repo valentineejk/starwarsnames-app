@@ -1,12 +1,16 @@
+import React from "react";
 import "./App.css";
+import { Starwars } from "./components/Starwars";
 
 function App() {
   return (
     <div className="App">
-      <div>start</div>
-      <div>start2</div>
+      <header className="App-header">
+        <Starwars />
+      </header>
     </div>
   );
 }
 
 export default App;
+// const Item: React.FC<Props>
