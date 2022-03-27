@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import { Starwars } from "./components/Starwars";
+import OldRepublic from "./components/OldRepublic";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Starwars />
+        <OldRepublic />
       </header>
     </div>
   );

@@ -12,7 +12,7 @@ export const Starwars = () => {
   });
 
   const getNinja = () => {
-    const randomChar = Math.round(Math.random() * 82);
+    const randomChar = Math.round(Math.random() * 88);
     const url = `https://swapi.dev/api/people/${randomChar}/`;
 
     fetch(url)
